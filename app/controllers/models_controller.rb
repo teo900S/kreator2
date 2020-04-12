@@ -19,11 +19,15 @@ class ModelsController < ApplicationController
     # take info from the form and add it to the database
     @model = Model.new(form_params)
 
-    #save to database
-    @model.save
+    #we want to check if the model can be changed
+    #if it is, we're go to the homepage again
+    #if it isn't. show the new form
+    if @model.save
+      redirect_to root_path
+    else
+      render "new"
+    end
 
-    #redirect to homepage
-    redirect_to root_path
   end
 
   def show
@@ -53,11 +57,13 @@ class ModelsController < ApplicationController
     @model = Model.find(params[:id])
 
     # update with the form info
-    @model.update(form_params)
+    if @model.update(form_params)
 
-    # redirect somewhere new
-    redirect_to model_path(@model)
-
+      # redirect somewhere new
+      redirect_to model_path(@model)
+    else
+      render "edit"
+    end
   end
 
   def form_params

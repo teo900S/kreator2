@@ -1,5 +1,16 @@
 <%= form_for @model do |f| %>
 
+  <% if @model.errors.any? %>
+
+    <div class="error">
+
+      <% @model.errors.full_messages.each do |msg| %>
+        <p><%= msg %></p>
+      <% end %>
+    </div>
+
+  <% end %>
+
   <p>
     <%= f.label :title %>
     <%= f.text_field :title %>
