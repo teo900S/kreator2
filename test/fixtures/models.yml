@@ -1,0 +1,31 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  description: MyText
+  rating: 1
+  category: MyString
+  format: MyString
+  polycount: 1
+  price: 1
+  license: MyText
+  pbr: MyString
+  animated: MyString
+  rigged: MyString
+  scanned: MyString
+  3dprint: MyString
+
+two:
+  title: MyString
+  description: MyText
+  rating: 1
+  category: MyString
+  format: MyString
+  polycount: 1
+  price: 1
+  license: MyText
+  pbr: MyString
+  animated: MyString
+  rigged: MyString
+  scanned: MyString
+  3dprint: MyString

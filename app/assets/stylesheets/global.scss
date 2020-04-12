@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css?family=PT+Serif:400,400i,700,700i|Work+Sans:400,700');
+
+$green: #3Bc8AA;
+$orange: #ff551A;
+$black: #1E1E1E;
+$gray: #F3f3f3;
+
+$titleFont: "PT Serif";
+$bodyFont: "Helvetica";
+
+body {
+  color: $black;
+}
+
+nav {
+  background-color: $orange;
+}
+
+footer {
+  background-color: $gray;
+}
+
+h2 {
+  color: $green
+}

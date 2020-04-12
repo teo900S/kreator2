@@ -1,0 +1,7 @@
+<% @models.each do |model| %>
+
+  <div class="models">
+    <%= link_to model.title, model_path(model) %>
+  </div>
+
+<% end %>

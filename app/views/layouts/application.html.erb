@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Kreator – The Best 3D Model site</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    
+  </head>
+
+  <body>
+      <header>
+
+          <h1>
+            <%= link_to root_path do %>
+              <%= image_tag "kreator-logo.svg" %>
+            <% end %>
+          </h1>
+
+          <h2>The best models in the world</h2>
+        <nav>
+          <%= link_to "Add a model", new_model_path %>
+        </nav>
+      </header>
+
+
+    <%= yield %>
+
+    <footer>
+      Copyright 2020 Kreator Website
+    </footer>
+
+  </body>
+</html>
